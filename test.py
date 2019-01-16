@@ -19,12 +19,12 @@ batch_size = 10
 if __name__ == '__main__':
 	# network initialize
 	VGGUnet = Network(Usage_net, Image_y_size, Image_x_size, Image_channels, Seg_classes)
-	VGGUnet.restore(model_path = 'ckpt/model_384_12epochs/')
+	VGGUnet.restore(model_path = 'ckpt/')
 
 	#ground truth preprocess
 	ground_truth, ground_truth_not_merge = ground_truth_read()
 
-	test_file_path = glob('/media/jianjie/cf360de1-1e04-496f-aca5-083f49b831bb/Unet/Unet/test/*')
+	test_file_path = glob('test/*')
 
 	total_TP = np.zeros(10)
 	total_FN = np.zeros(10)
