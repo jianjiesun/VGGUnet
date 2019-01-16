@@ -1,0 +1,2 @@
+model_checkpoint_path: "Unet_model_4.ckpt"
+all_model_checkpoint_paths: "Unet_model_4.ckpt"
